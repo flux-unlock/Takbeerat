@@ -373,9 +373,9 @@
         document.getElementById('statusText').textContent = 'تعذّر التشغيل';
       });
     } else {
+      setPlaying(false);
       audio.pause();
       audio.src = '';
-      setPlaying(false);
     }
   }
 
@@ -413,6 +413,7 @@
 
   // Audio error
   audio.addEventListener('error', () => {
+    if (!playing) return;
     setPlaying(false);
     document.getElementById('statusText').textContent = 'خطأ في التحميل';
   });
