@@ -241,8 +241,7 @@
     <div class="player-body">
 
       <div class="track-info" style="text-align:center; margin-bottom:24px;">
-        <div class="track-title">إذاعة القرآن الكريم</div>
-        <div class="track-sub">بث مباشر على مدار الساعة</div>
+        <div class="track-sub">بث على مدار الساعة</div>
       </div>
 
       <div class="wave-container" id="waveContainer">
@@ -285,6 +284,15 @@
     </div>
   </div>
 
+  <!-- Greeting -->
+  <div class="greeting-box">
+    <span class="greeting-deco">✦ ✦ ✦</span>
+    <div class="greeting-text">
+      <em>تقبّل الله منا ومنكم صالح الأعمال</em><br>
+      عيدكم مبارك وكل عام وأنتم بخير وسعادة ونعمة 🤍
+    </div>
+  </div>
+
   <!-- Feature grid -->
   <div class="features-grid">
     <div class="feat-card">
@@ -306,17 +314,8 @@
     </div>
     <div class="feat-card">
       <i class="fa-solid fa-tower-broadcast icon"></i>
-      <h3>البث المباشر</h3>
-      <p>تكبيرات العيد على مدار الساعة من إذاعة القرآن الكريم</p>
-    </div>
-  </div>
-
-  <!-- Greeting -->
-  <div class="greeting-box">
-    <span class="greeting-deco">✦ ✦ ✦</span>
-    <div class="greeting-text">
-      <em>تقبّل الله منا ومنكم صالح الأعمال</em><br>
-      عيدكم مبارك وكل عام وأنتم بخير وسعادة ونعمة 🤍
+      <h3>البث</h3>
+      <p>تكبيرات العيد على مدار الساعة</p>
     </div>
   </div>
 
@@ -361,7 +360,7 @@
     if (!('mediaSession' in navigator)) return;
     navigator.mediaSession.metadata = new MediaMetadata({
       title: 'تكبيرات العيد',
-      artist: 'إذاعة القرآن الكريم',
+      artist: 'عيد مبارك',
       album: 'عيد مبارك',
       artwork: [
         { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Kaaba_at_night.jpg/512x512.jpg', sizes: '512x512', type: 'image/jpeg' }
@@ -408,7 +407,7 @@
       btn.classList.add('playing');
       icon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
       dot.classList.add('live');
-      txt.textContent = 'يُبثّ الآن • مباشر';
+      txt.textContent = 'يُبثّ الآن';
       eq.classList.add('active');
       wave.classList.add('active');
       updateMediaSessionState('playing');
